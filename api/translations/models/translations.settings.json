@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "translations",
+  "info": {
+    "name": "translations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "translations"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "submitted",
+        "reviewing",
+        "allowed"
+      ],
+      "required": true,
+      "default": "draft"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "belong_to": {
+      "model": "music-videos",
+      "via": "translations"
+    }
+  }
+}

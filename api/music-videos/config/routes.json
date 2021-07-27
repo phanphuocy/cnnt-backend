@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/music-videos",
+      "handler": "music-videos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/music-videos/count",
+      "handler": "music-videos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/music-videos/:id",
+      "handler": "music-videos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/music-videos",
+      "handler": "music-videos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/music-videos/:id",
+      "handler": "music-videos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/music-videos/:id",
+      "handler": "music-videos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

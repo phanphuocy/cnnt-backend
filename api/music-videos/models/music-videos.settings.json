@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "musicVideos",
+  "info": {
+    "name": "Music Videos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "thaiTitle": {
+      "type": "string",
+      "required": true
+    },
+    "englishTitle": {
+      "type": "string",
+      "required": true
+    },
+    "lyrics": {
+      "type": "richtext",
+      "required": true
+    },
+    "isFromDeungdutjai": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "youtubeVideoId": {
+      "type": "string",
+      "required": true,
+      "maxLength": 11,
+      "minLength": 11
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "englishTitle",
+      "required": true,
+      "maxLength": 50
+    },
+    "originallyPerformedBy": {
+      "via": "originalMusicVideos",
+      "collection": "profiles",
+      "dominant": true
+    },
+    "translations": {
+      "via": "belong_to",
+      "collection": "translations"
+    }
+  }
+}

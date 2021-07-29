@@ -1,4 +1,5 @@
-'use strict';
+"use strict";
+const seedData = require("../../actions/seed-data");
 
 /**
  * An asynchronous bootstrap function that runs before
@@ -10,4 +11,6 @@
  * See more details here: https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/configurations.html#bootstrap
  */
 
-module.exports = () => {};
+module.exports = async () => {
+  // await seedData(strapi, { deleteAllEntriesBeforeCreating: true });
+};

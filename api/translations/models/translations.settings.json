@@ -33,8 +33,8 @@
       "required": true
     },
     "belong_to": {
-      "model": "music-videos",
-      "via": "translations"
+      "via": "translations",
+      "model": "music-videos"
     }
   }
 }

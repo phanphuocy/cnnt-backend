@@ -31,6 +31,18 @@
     "originalMusicVideos": {
       "via": "originallyPerformedBy",
       "collection": "music-videos"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "spotify": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
     }
   }
 }

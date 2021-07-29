@@ -1,5 +1,5 @@
-'use strict';
-
+"use strict";
+const fs = require("fs");
 /**
  * Cron config that gives you an opportunity
  * to run scheduled jobs.
@@ -18,4 +18,17 @@ module.exports = {
   // '0 1 * * 1': () => {
   //
   // }
+  "0 * * * *": async () => {
+    const mv = await strapi.services["music-videos"].find();
+    await fs.writeFileSync("backup-data/mv.json", JSON.stringify(mv, null, 2), {
+      encoding: "utf-8",
+    });
+
+    const profiles = await strapi.services["profiles"].find();
+    await fs.writeFileSync(
+      "backup-data/profiles.json",
+      JSON.stringify(profiles, null, 2),
+      { encoding: "utf-8" }
+    );
+  },
 };

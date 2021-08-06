@@ -55,8 +55,8 @@ module.exports = ({ env }) => {
           database: process.env.MONGODB_DATABASE_NAME,
         },
         options: {
-          authenticationDatabase: env("AUTHENTICATION_DATABASE", null),
-          ssl: env.bool("DATABASE_SSL", true),
+          authenticationDatabase: process.env.AUTHENTICATION_DATABASE || null,
+          ssl: process.env.DATABASE_SSL || true,
         },
       },
     },

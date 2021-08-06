@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "short_films",
+  "info": {
+    "name": "Short Films",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "youtubeVideoId": {
+      "type": "string",
+      "required": true,
+      "maxLength": 11,
+      "minLength": 11,
+      "unique": true
+    },
+    "isSubbed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

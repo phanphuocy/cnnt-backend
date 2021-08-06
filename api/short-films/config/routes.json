@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/short-films",
+      "handler": "short-films.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/short-films/count",
+      "handler": "short-films.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/short-films/:id",
+      "handler": "short-films.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/short-films",
+      "handler": "short-films.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/short-films/:id",
+      "handler": "short-films.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/short-films/:id",
+      "handler": "short-films.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

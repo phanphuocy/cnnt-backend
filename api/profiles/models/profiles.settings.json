@@ -20,14 +20,6 @@
       "type": "uid",
       "required": true
     },
-    "gender": {
-      "type": "enumeration",
-      "enum": [
-        "Male",
-        "Female",
-        "Mixed"
-      ]
-    },
     "originalMusicVideos": {
       "via": "originallyPerformedBy",
       "collection": "music-videos"
@@ -43,6 +35,86 @@
     },
     "youtube": {
       "type": "string"
+    },
+    "appearedIn": {
+      "via": "casts",
+      "collection": "music-videos"
+    },
+    "fullEnglishName": {
+      "type": "string"
+    },
+    "nativeName": {
+      "type": "string"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "nicknames": {
+      "type": "string"
+    },
+    "birthplace": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "maleSoloist",
+        "femaleSoloist",
+        "boyBand",
+        "girlBand",
+        "coExBand",
+        "boyGroup",
+        "girlGroup"
+      ],
+      "required": false
+    },
+    "record_label": {
+      "via": "profiles",
+      "model": "record-labels"
+    },
+    "description": {
+      "type": "text"
+    },
+    "roleInBand": {
+      "type": "enumeration",
+      "enum": [
+        "Vocals",
+        "Guitar",
+        "Bass",
+        "Drum",
+        "Synthesiser"
+      ]
+    },
+    "memberOf": {
+      "model": "profiles",
+      "via": "members"
+    },
+    "members": {
+      "collection": "profiles",
+      "via": "memberOf"
+    },
+    "backdrop": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "facts": {
+      "type": "text"
     }
   }
 }

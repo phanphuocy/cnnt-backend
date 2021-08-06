@@ -53,6 +53,15 @@
     "transliteration": {
       "type": "string",
       "required": true
+    },
+    "casts": {
+      "via": "appearedIn",
+      "collection": "profiles",
+      "dominant": true
+    },
+    "contentReactions": {
+      "via": "musicVideoRef",
+      "collection": "content-reactions"
     }
   }
 }

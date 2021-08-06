@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/record-labels",
+      "handler": "record-labels.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/record-labels/count",
+      "handler": "record-labels.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/record-labels/:id",
+      "handler": "record-labels.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/record-labels",
+      "handler": "record-labels.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/record-labels/:id",
+      "handler": "record-labels.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/record-labels/:id",
+      "handler": "record-labels.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

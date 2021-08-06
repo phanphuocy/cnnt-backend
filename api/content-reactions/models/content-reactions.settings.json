@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_reactions",
+  "info": {
+    "name": "Content Reactions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userRef": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "contentReactions"
+    },
+    "musicVideoRef": {
+      "model": "music-videos",
+      "via": "contentReactions"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "like",
+        "love",
+        "laugh",
+        "touched",
+        "amused"
+      ],
+      "required": true,
+      "default": "like"
+    }
+  }
+}

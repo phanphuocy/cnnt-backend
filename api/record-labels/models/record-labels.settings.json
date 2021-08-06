@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "record_labels",
+  "info": {
+    "name": "Record Labels",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "logoImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "profiles": {
+      "via": "record_label",
+      "collection": "profiles"
+    },
+    "subsidiaryOf": {
+      "model": "record-labels",
+      "via": "subsidiaries"
+    },
+    "subsidiaries": {
+      "collection": "record-labels",
+      "via": "subsidiaryOf"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

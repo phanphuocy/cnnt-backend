@@ -1,6 +1,6 @@
 "use strict";
 const seedData = require("../../actions/seed-data");
-
+const linkMusicVideosToProfiles = require("../../actions/link-relation-song-profile");
 /**
  * An asynchronous bootstrap function that runs before
  * your application gets started.
@@ -13,4 +13,5 @@ const seedData = require("../../actions/seed-data");
 
 module.exports = async () => {
   // await seedData(strapi, { deleteAllEntriesBeforeCreating: true });
+  // await linkMusicVideosToProfiles(strapi);
 };

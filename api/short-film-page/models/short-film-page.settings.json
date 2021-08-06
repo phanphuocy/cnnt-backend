@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "short_film_pages",
+  "info": {
+    "name": "shortFilmPage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstToWatch": {
+      "model": "short-films"
+    }
+  }
+}

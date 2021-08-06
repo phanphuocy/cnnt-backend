@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/short-film-page",
+      "handler": "short-film-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/short-film-page",
+      "handler": "short-film-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/short-film-page",
+      "handler": "short-film-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
